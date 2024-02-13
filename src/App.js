@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import Habit from './Habit/Habit';
+import Navbar from './Navbar/Navbar';
+import Form from './Form/Form';
+import { useValue } from './itemContext';
+import WeekView from './HabitWeekView/WeekView';
 
 function App() {
+
+  const { showForm, showWeek } = useValue();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      
+      { showWeek ? <WeekView /> : <Habit /> }
+      {/* <WeekView /> */}
+      {
+        showForm &&
+        <div className="moodlOverlay">
+            <Form />
+        </div>
+      }
+
     </div>
   );
 }

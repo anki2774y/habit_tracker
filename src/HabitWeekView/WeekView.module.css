@@ -1,0 +1,161 @@
+.weekViewCnt {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.weekDaysMarkCnt {
+    margin: 5px;
+    display: grid;
+    grid-template-columns: repeat(7, 2fr);
+    gap: 3px;
+    width: 90%;
+    height: 55vh;
+    justify-items: center;
+    justify-content: space-around;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* align-content: center; */
+    padding-top: 10px;
+}
+
+.weekDaysMarkCnt::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 6px;
+}
+
+.weekDaysMarkCnt::-webkit-scrollbar-thumb {
+    width: 2px;
+    border-radius: 6px;
+    background-color: rgb(48, 41, 235);
+}
+
+.weekDaysMarkCnt::-webkit-scrollbar-track {
+    width: 2px;
+    border-radius: 6px;
+    background-color: #62a8e4;
+}
+
+.habit {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}
+
+.habitDetails {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.habitDetails p {
+    margin: 10px;
+}
+
+.habitName {
+    font-size: 1rem;
+    font-weight: 800;
+    text-shadow: 0 2px 3px #FF0000, 0 0 5px #0000FF;
+    text-transform: uppercase;
+}
+
+.createdDate {
+    font-size: small;
+    align-self: center;
+    font-weight: 700;
+}
+
+.weekDaysMark, .abvCurrentDt {
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 7.5px 20px;
+    background-color: #009688;
+    margin: 5px;
+}
+
+.abvCurrentDt {
+    background-color: #4c6866;
+}
+
+.weekDay, .weekDate {
+    margin: 0;
+}
+
+.weekDetail {
+    margin: 2.5px;
+}
+
+.dayAction {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin:  12.5px 0px 5px;
+}
+
+.dayAction svg {
+    cursor: pointer;
+}
+
+.backBtn {
+    width: 30%;
+    height: fit-content;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-top: 5%;
+    padding: 10px;
+    letter-spacing: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: rgb(180, 179, 179) 0px 1px 4px;
+}
+
+.backBtn p {
+    margin: 0;
+    font-size: medium;
+    font-weight: 500;
+}
+
+.backBtn:hover p {
+    font-weight: 700;
+}
+
+.backBtn:focus {
+    box-shadow: white 0px 2px 8px;
+}
+
+.statusDone {
+    color: green;
+}
+
+.statusNotDone {
+    color: red;
+}
+
+.statusNone {    
+    color: rgb(60, 59, 59);
+}
+
+[data-tooltip] {
+    position: relative;
+}
+
+[data-tooltip]:hover:after {
+    content: attr(data-tooltip);
+    position: absolute;
+    background: grey; 
+    color: white; 
+    opacity: 0.7;
+    font-weight: 600;
+    padding: 1px 2px;
+    border-radius: 5px; 
+    font-size: 12px; 
+    white-space: nowrap; 
+    z-index: 1; 
+    left: 50%; 
+    transform: translateX(-15%); 
+    border: 2px solid lightgray;
+    bottom: -90%; 
+}

@@ -1,0 +1,128 @@
+.formPage {
+    height: auto;
+    width: fit-content;
+    background: rgb(4,116,141);
+    background: rgb(4,98,141);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    width: 30%;
+}
+
+.heading {
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px red;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.formInput {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.habitName {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.habitName label {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.habitInput {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.habitInput input {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 0;
+    padding-left: 5px;
+    cursor: default;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.iconCnt {
+    max-width: 10%;
+    min-width: auto;
+    height: auto;
+    background-color: red;
+    padding: 3px 4px;
+    display: flex;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: default;
+}
+
+.buttonCnt {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+button:active {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+button[type='button'] {
+    margin-right: 10px;
+}
+
+.iconCnt {
+    position: relative;
+    cursor: default;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 10px;
+}
+
+.colorSelector {
+    height: auto;
+    width: auto;
+    background-color: red;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.habitIconCnt {
+    margin: 5px;
+    display: grid;
+    grid-template-columns: repeat(8, 2fr);
+    gap: 3px;
+}
+
+.times:hover {
+    background-color: red;
+}
+

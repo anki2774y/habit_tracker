@@ -1,0 +1,62 @@
+.navbarCnt {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5%;
+    background: rgb(107,9,170);
+    background: linear-gradient(30deg, rgba(107,9,170,1) -75%, rgba(77,141,4,1) 74%, rgba(14,107,189,1) 90%);
+}
+
+.navbarP1 {
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    cursor: default;
+    margin-left: 1%;
+}
+
+.navbarP2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 20%;
+    margin-right: 1%;
+}
+
+.view, .addHbt {
+    height: fit-content;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    padding: 2% 3%;
+    border-radius: 7.5px;
+    cursor: pointer;
+}
+
+.view:hover, .addHbt:hover {
+    box-shadow: rgba(175, 251, 209, 0.4) 1px 2px 1px 1px, rgba(87, 255, 224, 0.3) 1px 7px 13px 1px, rgba(53, 192, 247, 0.2) 2px -1px 1px inset;
+}
+
+.addHbt {
+    margin-left: 5%;
+}
+
+.navP2, .appName {
+    margin: 0;
+}
+
+.navP2 {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+
+.moodlOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
