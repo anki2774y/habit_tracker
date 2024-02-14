@@ -7,6 +7,7 @@ import { actions, habitSelector } from "../redux/reducers/habitReducer";
 import { useValue } from "../itemContext";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { NavLink } from "react-router-dom";
 
 function HabitList() {
 
@@ -34,10 +35,10 @@ function HabitList() {
                             </div>
                         </div>
                         <div className={styles.actionCnt}>
-                            <div className={styles.view} onClick={()=>weekView(i)}>
+                            <NavLink to={`/weekview?habit=${habit.text.name}`} className={styles.view} onClick={()=>weekView(i)}>
                                 <FaCalendarAlt />
                                 <p> Week View </p>
-                            </div>
+                            </NavLink>
                             <div 
                                 className={styles.delete} 
                                 onClick={
@@ -52,7 +53,7 @@ function HabitList() {
                         </div>
                     </div>
                 ))}
-                </div>
+            </div>
         </>
     )
 }

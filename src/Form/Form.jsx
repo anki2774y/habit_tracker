@@ -5,12 +5,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { actions, habitSelector } from "../redux/reducers/habitReducer";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
 
 function Form() {
 
     const { closeForm, formData, setFormData } = useValue();
     const disptach = useDispatch();
     const habits = useSelector(habitSelector);
+    const navigate = useNavigate();
 
     // Current Date 
     const currentDate = new Date()
@@ -54,6 +56,7 @@ function Form() {
         clearForm();
         toast.success("Added Successfully !");
         closeForm();
+        navigate('/');
     }
 
     return (

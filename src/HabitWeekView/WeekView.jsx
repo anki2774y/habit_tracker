@@ -5,6 +5,7 @@ import { actions, habitSelector } from '../redux/reducers/habitReducer';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { format, lastDayOfWeek } from "date-fns";
+import { NavLink } from "react-router-dom";
 
 function WeekView() {
     const { setShowWeek } = useValue();
@@ -102,9 +103,9 @@ function WeekView() {
                                 ))}
                             </div>
                         </div>
-                        <div tabIndex={0} className={styles.backBtn} onClick={()=>handleWeekView(habit[0].text.id)}>
+                        <NavLink to={'/'} tabIndex={0} className={styles.backBtn} onClick={()=>handleWeekView(habit[0].text.id)}>
                             <p> Back To Detail View </p>
-                        </div>
+                        </NavLink>
                     </>
                 }
             </div>

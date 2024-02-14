@@ -110,12 +110,14 @@
     border-radius: 10px;
     cursor: pointer;
     box-shadow: rgb(180, 179, 179) 0px 1px 4px;
+    text-decoration: none;
 }
 
 .backBtn p {
     margin: 0;
     font-size: medium;
     font-weight: 500;
+    color: white;
 }
 
 .backBtn:hover p {
